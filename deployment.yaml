@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    application: aspnet
+  name: aspnet
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      application: aspnet
+  template:
+    metadata:
+      labels:
+        application: aspnet
+    spec:
+      containers:
+      - name: aspnet
+        image: tcs-icpdemo.icp:8500/default/aspdotnet:testdotnet
+        ports:
+        - containerPort: 8080
+          protocol: TCP
