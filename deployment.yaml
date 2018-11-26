@@ -2,21 +2,21 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    application: aspnet
-  name: aspnet
+    application: springboot
+  name: springboot
 spec:
   replicas: 1
   selector:
     matchLabels:
-      application: aspnet
+      application: springboot
   template:
     metadata:
       labels:
-        application: aspnet
+        application: springboot
     spec:
       containers:
-      - name: aspnet
-        image: tcs-icpdemo.icp:8500/default/aspdotnet:testdotnet
+      - name: springboot
+        image: tcs-icpdemo.icp:8500/default/springboot:rest
         ports:
         - containerPort: 8080
           protocol: TCP

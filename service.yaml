@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    application: aspnet
-  name: aspnet
+    application: springboot
+  name: springboot
 spec:
   selector:
-    application: aspnet
+    application: springboot
   type: LoadBalancer
   ports:
   - port: 80
