@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: springboot
-        image: tcs-icpdemo.icp:8500/default/springboot:rest
+        image: tcs-icpdemo.icp:8500/default/springboot:latest
         ports:
         - containerPort: 8080
           protocol: TCP
