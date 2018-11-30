@@ -10,7 +10,7 @@ public class Controller {
 	
 	@GetMapping(value="health")
 	public String healthCheck() {
-		return "Health is OK. This is change for docker change";
+		return "Health is OK. 2nd change";
 		
 		
 	}
